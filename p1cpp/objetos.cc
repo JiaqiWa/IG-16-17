@@ -11,11 +11,7 @@
 
 _puntos3D::_puntos3D()
 {
-    vertices.insert(0,0,0);
-    vertices.insert(0,0,1);
-    vertices.insert(0,1,0);
-    vertices.insert(1,0,0);
-
+ 
 }
 
 //*************************************************************************
