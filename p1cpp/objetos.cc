@@ -70,6 +70,7 @@ void _triangulos3D::draw_solido_ajedrez(float r1, float g1, float b1, float r2, 
 _cubo::_cubo(float tam)
 {
 
+
 }
 
 
