@@ -71,6 +71,7 @@ _cubo::_cubo(float tam)
 {
 
 
+
 }
 
 
