@@ -1,0 +1,25 @@
+Práctica 1: visualización cubo y tetraedro (irregular)
+
+Paso1: 
+	make
+
+Paso2: 
+	./practica1
+
+
+A) Cubo verde con las aristas en negro sin la tapa superior
+	verde (0,1,0)
+	negro (0,0,0)
+
+1º Comentar las dos caras superior del cubo
+2º implementar la funcion draw_arista_solido, pasando como parametro los colores de las aristas y de las caras
+	ps: no olvidar poner la cabecera en el archivo .h
+
+
+B) Cubo en ajedrez con azul, rojo y verde y vertices en negro
+	implementar draw_tres_colores
+
+C)Tetraedro con vértices en negro, aristas azul y cara en rojo y verde.
+	implementar draw_tetraedro_pac
+
+
