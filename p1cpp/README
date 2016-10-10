@@ -1,0 +1,12 @@
+Práctica 1: visualización cubo y tetraedro (irregular)
+
+Paso1: 
+	make
+
+Paso2: 
+	./practica1
+
+Paso3:
+	//Elige una opción puntos(p,P), alambre(l,L), sólido(s,S) o ajedrez(a,A);
+	//minúscula para la visualización del cubo y mayúscula para el tetraedro.
+

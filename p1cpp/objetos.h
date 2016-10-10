@@ -19,7 +19,7 @@ class _puntos3D
 {
 public:
 
-  
+
 	_puntos3D();
 void 	draw_puntos(float r, float g, float b, int grosor);
 
@@ -51,7 +51,7 @@ class _cubo: public _triangulos3D
 {
 public:
 
-	_cubo(float tam=0.5);
+	_cubo(float tam=5);
 };
 
 
@@ -63,11 +63,5 @@ class _piramide: public _triangulos3D
 {
 public:
 
-	_piramide(float tam=0.5, float al=0.75);
+	_piramide(float tam, float al);
 };
-
-
-
-
-
-

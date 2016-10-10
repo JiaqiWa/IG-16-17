@@ -25,6 +25,10 @@ int Window_x=50,Window_y=50,Window_width=450,Window_high=450;
 
 // objetos
 
+//***************************************************************************
+_cubo cubo(5.0);
+_piramide piramide(4.0,5.0);
+string modo;
 
 //**************************************************************************
 //
@@ -73,7 +77,7 @@ glRotatef(Observer_angle_y,0,1,0);
 
 void draw_axis()
 {
-	
+
 glDisable(GL_LIGHTING);
 glLineWidth(2);
 glBegin(GL_LINES);
@@ -95,10 +99,29 @@ glEnd();
 
 //**************************************************************************
 // Funcion que dibuja los objetos
-//***************************************************************************
+
+
 
 void draw_objects()
 {
+	if (modo == "p")
+	 	cubo.draw_puntos(1,0,1,5);
+	else if (modo == "l")
+		cubo.draw_aristas(0,1,1,4);
+	else if (modo == "s")
+		cubo.draw_solido(2,0,1);
+	else if (modo == "a")
+		cubo.draw_solido_ajedrez(1,1,0,0,0,0.3);
+	else if (modo == "P")
+	 	piramide.draw_puntos(1,0,1,5);
+	else if (modo == "L")
+		piramide.draw_aristas(0,1,1,4);
+	else if (modo == "S")
+	 	piramide.draw_solido(2,0,1);
+	else if (modo == "A")
+	 	piramide.draw_solido_ajedrez(1,1,0,0,0,0.3);
+
+
 
 }
 
@@ -149,7 +172,13 @@ glutPostRedisplay();
 
 void normal_key(unsigned char Tecla1,int x,int y)
 {
-if (toupper(Tecla1)=='Q') exit(0);
+	if (toupper(Tecla1)=='Q'){
+		exit(0);
+	}else{
+		modo = Tecla1;
+		draw();
+	}
+
 }
 
 //***************************************************************************
@@ -185,13 +214,13 @@ glutPostRedisplay();
 void initialize(void)
 {
 // se inicalizan la ventana y los planos de corte
-Size_x=0.5;
-Size_y=0.5;
-Front_plane=1;
+Size_x=5;
+Size_y=5;
+Front_plane=10;
 Back_plane=1000;
 
 // se incia la posicion del observador, en el eje z
-Observer_distance=4*Front_plane;
+Observer_distance=2*Front_plane;
 Observer_angle_x=0;
 Observer_angle_y=0;
 
