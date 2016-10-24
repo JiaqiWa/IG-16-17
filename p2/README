@@ -1,0 +1,19 @@
+Práctica 1: visualización cubo y tetraedro (irregular)
+
+Paso1: 
+	make
+
+Paso2: 
+	./practica2
+
+Paso3:
+	Pulsa primero 1 o 2  para elegir el numero de práctica
+	Pulsa "b" para ver la figura de beethoven.ply
+
+	Para practica 2:
+		-p l s a : puntos, arista, sólido, ajedrez --> revolución del perfil o de beethoven(si ha pulsado b antes)
+		-P L S A : puntos, arista, sólido, ajedrez --> barrido de un octogono
+			//comentar linea 114 y descomentar 115 para ver el barrido de un pentágono
+
+
+
