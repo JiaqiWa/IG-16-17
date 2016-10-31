@@ -110,7 +110,7 @@ glEnd();
 
 void draw_objects()
 {
-	_revolucion revolucionobj(perfil,Y, 100.0);
+	_revolucion revolucionobj(perfil,Y, 8.0);
 	_barrido barridoobj(octogono,10, 0.5, Y);
 	//_barrido barridoobj(pentagono,10, 0.5, Z);
 

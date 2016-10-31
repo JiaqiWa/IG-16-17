@@ -332,10 +332,11 @@ void _revolucion::getPerfilVertices()
 
 void _revolucion::getPerfilCaras()
 {
+
         caras.clear();
         int verticesTotal = vertices.size();
         int verticeAux1 , verticeAux2;
-        for (int i = 0; i < numPerfil; i++)
+        for (int i = 0; i < numPerfil-1; i++)
         {
                 for (int j = 0; j < numVerticesPerfil -1; j++)
                 {
@@ -359,6 +360,28 @@ void _revolucion::getPerfilCaras()
                         caras.push_back(caraAux);
 
                 }
+        }
+        for (int j = 0; j < numVerticesPerfil -1; j++){
+                verticeAux1 = (numPerfil-1)*numVerticesPerfil+j;
+                verticeAux2 = j+1;
+                _vertex3i caraAux;
+
+                //cara 1
+                caraAux._0 = verticeAux1; //1er vertice del triangulo(perfil actual)
+                caraAux._1 = verticeAux2; //2o vertice del triangulo (perfil actual)
+                caraAux._2 = verticeAux2-1; //3er vertice del triangulo (perfil siguente)
+
+                caras.push_back(caraAux);
+
+
+                //cara2
+                caraAux._0 = verticeAux2; //1er vertice del triangulo(perfil actual)
+                caraAux._1 = verticeAux1; //2o vertice del triangulo (perfil siguiente)
+                caraAux._2 = verticeAux1+1; //3er vertice del triangulo (perfil siguente)
+
+                caras.push_back(caraAux);
+
+
         }
 
 }
